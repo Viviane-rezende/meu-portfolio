@@ -1,0 +1,19 @@
+.avatar {
+  border-radius: 24px;
+  flex-shrink: 0;
+  background: linear-gradient(150deg, var(--accent), var(--social-bg) 55%, var(--code-bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-in);
+  border: 1px solid var(--border);
+}
+
+
+.avatar:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(170, 59, 255, 0.4);
+  border-color: var(--social-bg);
+}

@@ -1,0 +1,34 @@
+.button {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.button-solid {
+  background: var(--accent);
+  color: var(--text-h);
+  border: 1px solid transparent;
+}
+
+.button-solid:hover {
+  opacity: 0.88;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.button-outline:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
