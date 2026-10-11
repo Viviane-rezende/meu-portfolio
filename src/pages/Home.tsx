@@ -48,11 +48,11 @@ const languages = [
 ];
 
 const projects = [
-  { id: "kpi-dashboard", category: "React", title: "Dashboard KPI", summary: "Painel de indicadores em React + TS" },
-  { id: "views-manager", category: "SQL", title: "Gestor de Views", summary: "Automação de views MySQL" },
-  { id: "multi-app", category: "Mobile", title: "App Multiplataforma", summary: "App híbrido de estudos" },
-  { id: "tickets-api", category: "API", title: "API de Tickets", summary: "Integração com Znuny/OTRS" },
-  { id: "beauty-landing", category: "Web", title: "Landing Beauty-Tech", summary: "Site institucional" },
+  { id: "EducaHost", category: "1º Semestre", title: "EducaHost", summary: "Plataforma educacional - HTML, CSS, JavaScript" },
+  { id: "SagradoSistema", category: "2º Semestre", title: "Sagrado Sistema", summary: "Plataforma de Gestão - HTML, CSS, JavaScript" },
+  { id: "EcoBalance", category: "3º Semestre", title: "Eco Balance", summary: "Plataforma de Rastreamento de Carbono - React, TypeScript" },
+  { id: "QeM", category: "4º Semestre", title: "Questões e Masmorras", summary: "Plataforma de Gamificação para Estudos - React Native, TypeScript" },
+  { id: "Eco Balance Mobile", category: "5º Semestre", title: "Eco Balance Mobile", summary: "App mobile de rastreamento de carbono - React Native, TypeScript" },
 ];
 
 {/*const curso = [
