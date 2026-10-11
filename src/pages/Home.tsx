@@ -6,42 +6,44 @@ import Button from "../components/Button";
 import Avatar from "../components/Avatar";
 import fotoPerfil from "../assets/viviane-foto-perfil.jpg"
 
-// --- dados (troque por um arquivo em src/data quando fizer sentido) ---
 
 const jobs = [
   {
     company: "Binário Net",
     role: "Assistente Q.A.",
-    period: "out. 2023 — atual",
+    period: "Maio de 2026 - Até o momento",
     description:
-      "Monitoramento de indicadores operacionais e KPIs em Power BI para as operações DASA, CLARO/FUST, EACE, RNP e SOC/NOC, com consultas em MySQL/MariaDB.",
+      "Criação e manutenção de dashboards no Power BI para as operações de Suporte de Redes. Consultas e aprimoramentos em MySQL/MariaDB. Acompanhamento de KPI's para diretoria e clientes, garantindo a qualidade dos dados e relatórios.",
   },
   {
-    company: "Estúdio de Estética",
-    role: "Esteticista",
-    period: "2019 — 2023",
+    company: "Binário Net",
+    role: "Estagiária de Redes",
+    period: "Junho de 2025 até Maio de 2026",
     description:
-      "Atendimento e procedimentos estéticos — experiência que hoje molda seu olhar de produto e atenção a detalhe em QA.",
+      "Suporte às operações de redes, acompanhando chamados, auxiliando na identificação e resolução de problemas de conectividade.\
+      Contribuição com o monitoramento de rede e documentações técnicas.",
+  },
+  {
+    company: "Estúdio de Beleza",
+    role: "Profissional de Estética",
+    period: "Outubro de 2021 até novembro de 2023",
+    description:
+      "Atendimento e procedimentos estéticos - experiência que hoje molda meu olhar de produto e atenção aos detalhe em QA.",
   },
 ];
 
 const extensionCourses = [
   {
-    name: "DAX para Power BI — nível avançado",
-    institution: "Instituição",
+    name: "Desenvolvimento de Sistemas",
+    institution: "SENAC SP - Projeto Gerando Falcões",
     hours: 40,
-    period: "mar. 2025 — abr. 2025",
-  },
-  {
-    name: "Fundamentos de MySQL",
-    institution: "Instituição",
-    hours: 20,
-    period: "nov. 2024",
-  },
+    period: "Novembro 2024 até maio de 2025",
+  }
 ];
 
 const languages = [
   { name: "Português", level: "Nativo" },
+  { name: "Espanhol", level: "Avançado" },
   { name: "Inglês", level: "Intermediário" },
 ];
 
@@ -53,14 +55,13 @@ const projects = [
   { id: "beauty-landing", category: "Web", title: "Landing Beauty-Tech", summary: "Site institucional" },
 ];
 
-const curso = [
+{/*const curso = [
   { chave: "Faculdade", valor: "FATEC Zona Leste" },
   { chave: "Curso", valor: "Desenvolvimento de Software Multiplataforma" },
   { chave: "Ano início", valor: "2024.1" },
   { chave: "Ano término", valor: "2026.12" },
 
-
-]
+]*/}
 
 const featuredProject = {
   title: "Dashboard KPI Multi-operação",
@@ -82,26 +83,41 @@ export default function Home() {
         </Avatar>
         <h1>Viviane Rezende Silva</h1>
         <p className="hero-role">
-          Da estética a tecnologia. Com coragem, fiz transição de carreira e hoje estou como Assistente Q.A
-          e no último semestre do curso superior em Desenvolvimento de Software Multiplataforma.
+          Da estética à tecnologia, construí uma nova trajetória com coragem e dedicação. Hoje, atuo como Assistente de Garantia da Qualidade (QA) e estou no último semestre de Desenvolvimento de Software Multiplataforma na FATEC Zona Leste.
         </p>
-        <div className="hero-facts">
-          <span>FATEC Zona Leste</span>
+
+        <div>
+
+          <Badge><Button href="https://github.com/Viviane-Rezende" variant="outline">
+            github.com/vivi ↗
+          </Button></Badge>
         </div>
+        {/* <div className="hero-facts">
+          <span>FATEC Zona Leste</span>
+        </div> */}
 
-        <Section title="Acadêmico">
-          <div className="chip-row">
-            {curso.map((acad) => (
-              <Badge key={acad.valor} variant="accent">
-                {acad.valor}
-              </Badge>
-            ))}
+
+      </Section>
+
+      <Section title="Acadêmico">
+        <div className="academic-info">
+          <h3>Desenvolvimento de Software Multiplataforma</h3>
+          <p className="academic-institution">FATEC Zona Leste</p>
+
+          <div className="academic-dates">
+            <div>
+              <span className="academic-label">Início</span>
+              <p>1º semestre de 2024</p>
+            </div>
+
+            <div>
+              <span className="academic-label">Conclusão prevista</span>
+              <p>Dezembro de 2026</p>
+            </div>
           </div>
-        </Section>
 
-        <Button href="https://github.com/Viviane-Rezende" variant="outline">
-          github.com/vivi ↗
-        </Button>
+          <Badge variant="accent">Cursando o último semestre</Badge>
+        </div>
       </Section>
 
 
