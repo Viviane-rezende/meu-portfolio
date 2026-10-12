@@ -1,4 +1,4 @@
-# Portfólio — Viviane Rezende Silva
+# Portfólio - Viviane Rezende Silva
 
 Portfólio acadêmico e profissional desenvolvido para apresentar
 minha trajetória na tecnologia, experiências e projetos realizados
