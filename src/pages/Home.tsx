@@ -5,6 +5,7 @@ import Badge from "../components/Badge";
 import Button from "../components/Button";
 import Avatar from "../components/Avatar";
 import fotoPerfil from "../assets/viviane-foto-perfil.jpg"
+import { Link } from "react-router-dom";
 
 
 const jobs = [
@@ -48,11 +49,11 @@ const languages = [
 ];
 
 const projects = [
-  { id: "EducaHost", category: "1º Semestre", title: "EducaHost", summary: "Plataforma educacional - HTML, CSS, JavaScript" },
-  { id: "SagradoSistema", category: "2º Semestre", title: "Sagrado Sistema", summary: "Plataforma de Gestão - HTML, CSS, JavaScript" },
-  { id: "EcoBalance", category: "3º Semestre", title: "Eco Balance", summary: "Plataforma de Rastreamento de Carbono - React, TypeScript" },
-  { id: "QeM", category: "4º Semestre", title: "Questões e Masmorras", summary: "Plataforma de Gamificação para Estudos - React Native, TypeScript" },
-  { id: "Eco Balance Mobile", category: "5º Semestre", title: "Eco Balance Mobile", summary: "App mobile de rastreamento de carbono - React Native, TypeScript" },
+  { id: "EducaHost", category: "1º Semestre", title: "EducaHost", link: "/projetos/educahost", summary: "Plataforma educacional - HTML, CSS, JavaScript" },
+  { id: "SagradoSistema", link: "/projetos/sagrado-sistema", category: "2º Semestre", title: "Sagrado Sistema", summary: "Plataforma de Gestão - HTML, CSS, JavaScript" },
+  { id: "EcoBalance", link: "/projetos/eco-balance", category: "3º Semestre", title: "Eco Balance", summary: "Plataforma de Rastreamento de Carbono - React, TypeScript" },
+  { id: "QeM", link: "/projetos/qem", category: "4º Semestre", title: "Questões e Masmorras", summary: "Plataforma de Gamificação para Estudos - React Native, TypeScript" },
+  { id: "EcoBalanceMobile", link: "/projetos/eco-balance-mobile", category: "5º Semestre", title: "Eco Balance Mobile", summary: "App mobile de rastreamento de carbono - React Native, TypeScript" },
 ];
 
 {/*const curso = [
@@ -63,15 +64,6 @@ const projects = [
 
 ]*/}
 
-const featuredProject = {
-  title: "Dashboard KPI Multi-operação",
-  stack: ["React", "TypeScript", "Power BI Embedded", "DAX"],
-  repoUrl: "https://github.com/vivi/kpi-dashboard",
-  description:
-    "Painel único reunindo indicadores das operações DASA, CLARO/FUST, EACE, RNP e SOC/NOC, com filtros por operação e período.",
-  contribution:
-    "Modelagem de dados, criação das medidas DAX e desenvolvimento da interface em React consumindo os relatórios via Power BI Embedded.",
-};
 
 export default function Home() {
   return (
@@ -158,43 +150,25 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Projetos" count={`0${projects.length} semestres`}>
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <Card
-              key={project.id}
-              title={project.title}
-              onClick={() => {
-                // navegue até a rota de detalhe, ex.: navigate(`/projetos/${project.id}`)
-              }}
-              footer={<Badge variant="accent">{project.category}</Badge>}
-            >
-              <p>{project.summary}</p>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
-      <Section title="Tela de projeto" count="exemplo">
+      <Section title="Projetos" count={`${projects.length} projetos`}>
+  <div className="projects-grid">
+    {projects.map((project) => (
+      <Link
+        key={project.id}
+        to={`/projetos/${project.id}`}
+        className="project-link"
+      >
         <Card
-          title={featuredProject.title}
-          footer={<Button href={featuredProject.repoUrl}>Ver código no GitHub</Button>}
+          title={project.title}
+          footer={<Badge variant="accent">{project.category}</Badge>}
         >
-          <div className="chip-row">
-            {featuredProject.stack.map((tech) => (
-              <Badge key={tech} variant="pink">
-                {tech}
-              </Badge>
-            ))}
-          </div>
-          <p>
-            <b>Descrição:</b> {featuredProject.description}
-          </p>
-          <p>
-            <b>Minha participação:</b> {featuredProject.contribution}
-          </p>
+          <p>{project.summary}</p>
         </Card>
-      </Section>
+      </Link>
+    ))}
+  </div>
+</Section>
+
 
       <footer className="page-footer">Hospedado via GitHub Pages · © 2026 Vivi Silva</footer>
     </>

@@ -41,7 +41,7 @@
  
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 400px);
   gap: 16px;
 }
  
@@ -108,4 +108,56 @@
 .academic-dates p {
   margin: 4px 0 0;
   font-size: 14px;
+}
+
+.projects-grid {
+  align-items: stretch;
+}
+
+.project-link {
+  display: flex;
+  height: auto;
+}
+
+.project-link > * {
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-link > * > :last-child {
+  margin-top: auto;
+}
+
+a.project-link,
+a.project-link:hover,
+a.project-link:visited,
+a.project-link:focus {
+  text-decoration: none !important;
+  color: var(--text);
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(184, 63, 255, 0.2);
+}
+
+.project-link:focus-visible {
+  outline: 2px solid #b83fff;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-link {
+    transition: none;
+  }
+
+  .project-link:hover,
+  .project-link:focus-visible {
+    transform: none;
+  }
 }
