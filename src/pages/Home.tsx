@@ -73,7 +73,7 @@ export default function Home() {
         <Avatar initials="V">
 
         </Avatar>
-        <h1>Viviane Rezende Silva</h1>
+        <h1 className="hero-name">Viviane Rezende Silva</h1>
         <p className="hero-role">
           Da estética à tecnologia, construí uma nova trajetória com coragem e dedicação. Hoje, atuo como Assistente de Garantia da Qualidade (QA) e estou no último semestre de Desenvolvimento de Software Multiplataforma na FATEC Zona Leste.
         </p>
@@ -81,7 +81,7 @@ export default function Home() {
         <div>
 
           <Badge><Button href="https://github.com/Viviane-Rezende" variant="outline">
-            github.com/vivi ↗
+            github.com/viviane-rezende ↗
           </Button></Badge>
         </div>
         {/* <div className="hero-facts">
@@ -170,7 +170,7 @@ export default function Home() {
 </Section>
 
 
-      <footer className="page-footer">Hospedado via GitHub Pages · © 2026 Vivi Silva</footer>
+      <footer className="page-footer">Hospedado via GitHub Pages · © 2026 Viviane Rezende</footer>
     </>
   );
 }
