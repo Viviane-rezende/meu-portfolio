@@ -1,0 +1,34 @@
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: var(--shadow);
+  background: var(--accent-bg);
+}
+
+.card-clickable {
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card-clickable:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-3px);
+}
+
+.card-title {
+  font-size: 16.5px;
+  margin: 0 0 8px;
+}
+
+.card-body {
+  font-size: 14.5px;
+  color: var(--text);
+}
+
+.card-footer {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}

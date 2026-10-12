@@ -1,75 +1,76 @@
-# React + TypeScript + Vite
+# Portfólio — Viviane Rezende Silva
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio acadêmico e profissional desenvolvido para apresentar
+minha trajetória na tecnologia, experiências e projetos realizados
+no curso de Desenvolvimento de Software Multiplataforma
+da FATEC Zona Leste.
 
-Currently, two official plugins are available:
+## Acesse o portfólio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Visualizar site]
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- Apresentação pessoal e formação acadêmica.
+- Histórico de experiências profissionais.
+- Formação complementar e idiomas.
+- Projetos organizados por semestre.
+- Páginas de detalhes dos projetos com descrição, tecnologias,
+  imagens e links para os repositórios.
+- Carrossel de imagens dos projetos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- React Router
+- CSS
+- Vite
+- GitHub Pages
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Como executar localmente
 
+### Requisitos
+
+- Node.js em uma versão compatível com o projeto.
+- npm.
+- Git.
+
+### Instalação
+
+```bash
+git clone https://github.com/Viviane-rezende/meu-portfolio
+cd meu-portfolio
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Abra no navegador o endereço informado pelo terminal.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Gerar a versão de produção
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run build
 ```
+
+<!-- Confirme os comandos acima no arquivo package.json. -->
+
+## Organização do projeto
+
+- `src/assets/`: imagens utilizadas no portfólio.
+- `src/components/`: componentes reutilizáveis.
+- `src/pages/`: página inicial e páginas dos projetos.
+- `src/App.tsx`: configuração das rotas.
+
+
+## Navegação
+
+O projeto utiliza HashRouter para a navegação entre as páginas.
+As rotas usam o formato `/#/projetos/nome-do-projeto`.
+
+## Autoria
+
+Desenvolvido por **Viviane Rezende Silva**.
+
+[GitHub](https://github.com/Viviane-Rezende)
