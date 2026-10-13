@@ -12,6 +12,7 @@ import imagemContratos from "../assets/SagradoSistema3.png";
 
 
 import { useState } from "react";
+import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "Sagrado Sistema",
@@ -51,6 +52,7 @@ export default function SagradoSistema() {
 
   return (
     <main>
+      <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"

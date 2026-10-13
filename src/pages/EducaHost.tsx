@@ -10,6 +10,7 @@ import imagemModulo from "../assets/EducaHost2.png";
 import imagemUsuario from "../assets/EducaHost3.png";
 
 import { useState } from "react";
+import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "EducaHost",
@@ -49,6 +50,7 @@ export default function EducaHost() {
 
   return (
     <main>
+      <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"

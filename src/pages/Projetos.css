@@ -185,6 +185,16 @@
   color: #cf83ff;
 }
 
+.Link {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.Link:hover {
+  color: var(--social-bg);
+}
+
 @media (max-width: 700px) {
   .carousel-image {
     height: 300px;
@@ -194,4 +204,11 @@
     padding: 12px;
     font-size: 13px;
   }
+}
+
+.cabecalho {
+  text-align: right;
+  align-content: right;
+  padding: 16px;
+  color: var(--text);
 }
