@@ -7,7 +7,7 @@ da FATEC Zona Leste.
 
 ## Acesse o portfólio
 
-[Visualizar site]
+https://viviane-rezende.github.io/meu-portfolio/
 
 
 ## Funcionalidades
