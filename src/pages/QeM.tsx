@@ -10,6 +10,7 @@ import imagemLogin from "../assets/QeM2.png";
 import imagemJogo from "../assets/QeM3.png";
 
 import { useState } from "react";
+import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "Q&M",
@@ -49,6 +50,7 @@ export default function QeM() {
 
   return (
     <main>
+      <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"

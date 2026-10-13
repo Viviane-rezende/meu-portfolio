@@ -9,6 +9,7 @@ import imagemLogin from "../assets/EcoBalanceMobile1.png";
 import imagemConquista from "../assets/EcoBalanceMobile2.png";
 import imagemInicio from "../assets/EcoBalanceMobile3.png";
 import { useState } from "react";
+import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "EcoBalance Mobile",
@@ -48,6 +49,7 @@ export default function EcoBalanceMobile() {
 
   return (
     <main>
+      <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"
