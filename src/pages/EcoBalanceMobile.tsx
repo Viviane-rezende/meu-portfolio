@@ -121,6 +121,7 @@ export default function EcoBalanceMobile() {
           </div>
         </div>
       </Section>
+      <footer className="page-footer">Hospedado via GitHub Pages · © 2026 Viviane Rezende</footer>
     </main>
   );
 }
