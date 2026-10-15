@@ -49,7 +49,7 @@ export default function QeM() {
   }
 
   return (
-    <main>
+    <main className="pagina-projeto">
       <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card

@@ -51,7 +51,7 @@ export default function SagradoSistema() {
   }
 
   return (
-    <main>
+    <main className="pagina-projeto">
       <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card

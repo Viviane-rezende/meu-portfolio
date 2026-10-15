@@ -212,3 +212,7 @@
   padding: 16px;
   color: var(--text);
 }
+
+.pagina-projeto > .section:first-of-type > .section-head h2 {
+  font-size: 48px;
+}

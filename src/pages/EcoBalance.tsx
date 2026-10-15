@@ -48,7 +48,7 @@ export default function EcoBalance() {
   }
 
   return (
-    <main>
+    <main className="pagina-projeto">
       <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card

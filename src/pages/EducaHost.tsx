@@ -49,7 +49,7 @@ export default function EducaHost() {
   }
 
   return (
-    <main>
+    <main className="pagina-projeto">
       <Cabecalho/>
       <Section title={featuredProject.title}>
         <Card
