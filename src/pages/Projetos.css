@@ -207,8 +207,19 @@
 }
 
 .cabecalho {
-  text-align: right;
-  align-content: right;
-  padding: 16px;
-  color: var(--text);
+  text-align: left;
+}
+
+.pagina-projeto > .section:first-of-type > .section-head h2 {
+  font-size: 48px;
+}
+
+.voltar {
+  height: 32px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
+}
+
+.pagina-projeto .projeto-contribuicao {
+  margin-top: 24px;
 }

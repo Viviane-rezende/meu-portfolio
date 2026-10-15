@@ -13,11 +13,12 @@ import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "EcoBalance",
-  stack: ["HTML", "CSS", "JavaScript"],
+  stack: ["HTML", "CSS", "React","JavaScript"],
   repoUrl: "https://github.com/littlerichard01/EcoBalance",
   description:
     "Plataforma de rastreamento de carbono desenvolvida para auxiliar empresas e indivíduos a monitorar e reduzir sua pegada de carbono. O objetivo é fornecer informações sobre as emissões de gases de efeito estufa, permitindo que os usuários adotem práticas mais sustentáveis e contribuam para a preservação do meio ambiente.",
-};
+  contribuition: "Atuei no desenvolvimento front-end com React, JavaScript e CSS, implementando interfaces de cadastro, visualização de gráficos e conquistas. Também contribuí com ajustes de responsividade, navegação e organização dos elementos das páginas, buscando tornar a experiência mais intuitiva."
+  };
 
 const imagens = [
   {
@@ -35,7 +36,7 @@ const imagens = [
 ];
 
 export default function EcoBalance() {
-     const [indice, setIndice] = useState(0);
+  const [indice, setIndice] = useState(0);
 
   function anterior() {
     setIndice((atual) => (
@@ -48,8 +49,8 @@ export default function EcoBalance() {
   }
 
   return (
-    <main>
-      <Cabecalho/>
+    <main className="pagina-projeto">
+      <Cabecalho />
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"
@@ -70,58 +71,56 @@ export default function EcoBalance() {
           <p>
             <b>Descrição:</b> {featuredProject.description}
           </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
+          </p>
         </Card>
       </Section>
 
       <Section title="O projeto em funcionamento">
-  <div
-    className="project-carousel"
-    role="region"
-    aria-label="Imagens do EcoBalance"
-    aria-roledescription="carrossel"
-  >
-    <div className="carousel-stage">
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-left"
-        onClick={anterior}
-        aria-label="Imagem anterior"
-      >
-        ❮
-      </button>
+        <div
+          className="project-carousel"
+          role="region"
+          aria-label="Imagens do EcoBalance"
+          aria-roledescription="carrossel"
+        >
+          <div className="carousel-stage">
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-left"
+              onClick={anterior}
+              aria-label="Imagem anterior"
+            >
+              ❮
+            </button>
 
-      <a
-        href={imagens[indice].src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="carousel-image-link"
-        aria-label={`Ampliar: ${imagens[indice].legenda}`}
-      >
-        <img
-          src={imagens[indice].src}
-          alt={imagens[indice].legenda}
-          className="carousel-image"
-        />
-      </a>
+            <div className="carousel-image-link">
+              <img
+                src={imagens[indice].src}
+                alt={imagens[indice].legenda}
+                className="carousel-image"
+              />
+            </div>
 
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-right"
-        onClick={proxima}
-        aria-label="Próxima imagem"
-      >
-        ❯
-      </button>
-    </div>
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-right"
+              onClick={proxima}
+              aria-label="Próxima imagem"
+            >
+              ❯
+            </button>
+          </div>
 
-    <div className="carousel-caption" aria-live="polite">
-      <p>{imagens[indice].legenda}</p>
-      <span>
-        {indice + 1} / {imagens.length}
-      </span>
-    </div>
-  </div>
-</Section>
+          <div className="carousel-caption" aria-live="polite">
+            <p>{imagens[indice].legenda}</p>
+            <span>
+              {indice + 1} / {imagens.length}
+            </span>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }

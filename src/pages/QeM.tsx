@@ -13,12 +13,13 @@ import { useState } from "react";
 import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
-  title: "Q&M",
+  title: "Questões e Masmorras",
   stack: ["HTML", "CSS", "JavaScript"],
   repoUrl: "https://github.com/Lucas-Gatto/Questoes-e-Masmorras",
   description:
     "Plataforma de gamificação para estudos desenvolvida com o objetivo de tornar o aprendizado mais envolvente e motivador. O projeto combina elementos de jogos, como desafios, recompensas e progressão, com conteúdo educacional, proporcionando uma experiência interativa que estimula a participação ativa dos usuários e promove a retenção do conhecimento.",
-};
+  contribuition: "Contribuí com a prototipação, a documentação e o desenvolvimento front-end utilizando React, JavaScript e CSS. Atuei na implementação das interfaces de cadastro e edição de aventuras e salas, na manipulação de estado dos componentes e nas interações de avaliação por estrelas, além de ajustes de responsividade e padronização visual.",
+  };
 
 const imagens = [
   {
@@ -36,7 +37,7 @@ const imagens = [
 ];
 
 export default function QeM() {
-     const [indice, setIndice] = useState(0);
+  const [indice, setIndice] = useState(0);
 
   function anterior() {
     setIndice((atual) => (
@@ -49,8 +50,8 @@ export default function QeM() {
   }
 
   return (
-    <main>
-      <Cabecalho/>
+    <main className="pagina-projeto">
+      <Cabecalho />
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"
@@ -71,58 +72,56 @@ export default function QeM() {
           <p>
             <b>Descrição:</b> {featuredProject.description}
           </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
+          </p>
         </Card>
       </Section>
 
       <Section title="O projeto em funcionamento">
-  <div
-    className="project-carousel"
-    role="region"
-    aria-label="Imagens do Q&M"
-    aria-roledescription="carrossel"
-  >
-    <div className="carousel-stage">
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-left"
-        onClick={anterior}
-        aria-label="Imagem anterior"
-      >
-        ❮
-      </button>
+        <div
+          className="project-carousel"
+          role="region"
+          aria-label="Imagens do Q&M"
+          aria-roledescription="carrossel"
+        >
+          <div className="carousel-stage">
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-left"
+              onClick={anterior}
+              aria-label="Imagem anterior"
+            >
+              ❮
+            </button>
 
-      <a
-        href={imagens[indice].src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="carousel-image-link"
-        aria-label={`Ampliar: ${imagens[indice].legenda}`}
-      >
-        <img
-          src={imagens[indice].src}
-          alt={imagens[indice].legenda}
-          className="carousel-image"
-        />
-      </a>
+            <div className="carousel-image-link">
+              <img
+                src={imagens[indice].src}
+                alt={imagens[indice].legenda}
+                className="carousel-image"
+              />
+            </div>
 
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-right"
-        onClick={proxima}
-        aria-label="Próxima imagem"
-      >
-        ❯
-      </button>
-    </div>
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-right"
+              onClick={proxima}
+              aria-label="Próxima imagem"
+            >
+              ❯
+            </button>
+          </div>
 
-    <div className="carousel-caption" aria-live="polite">
-      <p>{imagens[indice].legenda}</p>
-      <span>
-        {indice + 1} / {imagens.length}
-      </span>
-    </div>
-  </div>
-</Section>
+          <div className="carousel-caption" aria-live="polite">
+            <p>{imagens[indice].legenda}</p>
+            <span>
+              {indice + 1} / {imagens.length}
+            </span>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }

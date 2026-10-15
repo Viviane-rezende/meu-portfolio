@@ -18,7 +18,11 @@ const featuredProject = {
   repoUrl: "https://github.com/emanuelmartinslima/Projeto-Educahost",
   description:
     "Plataforma educacional desenvolvida como complemento estudantil para crianças refugiadas. O objetivo é auxiliar na adaptação ao território brasileiro e no aprendizado por meio de atividades gamificadas, tornando esse processo leve e divertido.",
-};
+  contribuition: "Atuei na elaboração e organização da documentação técnica e funcional, contribuindo para \
+  a descrição dos objetivos, do público-alvo e das funcionalidades da plataforma. Colaborei na estruturação \
+  das informações que orientaram o desenvolvimento da solução educacional, bem como artefatos de apoio,\
+  como fluxogramas e diagramas, que auxiliaram na visualização e compreensão do projeto."
+  };
 
 const imagens = [
   {
@@ -36,7 +40,7 @@ const imagens = [
 ];
 
 export default function EducaHost() {
-     const [indice, setIndice] = useState(0);
+  const [indice, setIndice] = useState(0);
 
   function anterior() {
     setIndice((atual) => (
@@ -49,8 +53,8 @@ export default function EducaHost() {
   }
 
   return (
-    <main>
-      <Cabecalho/>
+    <main className="pagina-projeto">
+      <Cabecalho />
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"
@@ -71,58 +75,56 @@ export default function EducaHost() {
           <p>
             <b>Descrição:</b> {featuredProject.description}
           </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
+          </p>
         </Card>
       </Section>
 
       <Section title="O projeto em funcionamento">
-  <div
-    className="project-carousel"
-    role="region"
-    aria-label="Imagens do EducaHost"
-    aria-roledescription="carrossel"
-  >
-    <div className="carousel-stage">
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-left"
-        onClick={anterior}
-        aria-label="Imagem anterior"
-      >
-        ❮
-      </button>
+        <div
+          className="project-carousel"
+          role="region"
+          aria-label="Imagens do EducaHost"
+          aria-roledescription="carrossel"
+        >
+          <div className="carousel-stage">
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-left"
+              onClick={anterior}
+              aria-label="Imagem anterior"
+            >
+              ❮
+            </button>
 
-      <a
-        href={imagens[indice].src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="carousel-image-link"
-        aria-label={`Ampliar: ${imagens[indice].legenda}`}
-      >
-        <img
-          src={imagens[indice].src}
-          alt={imagens[indice].legenda}
-          className="carousel-image"
-        />
-      </a>
+            <div className="carousel-image-link">
+              <img
+                src={imagens[indice].src}
+                alt={imagens[indice].legenda}
+                className="carousel-image"
+              />
+            </div>
 
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-right"
-        onClick={proxima}
-        aria-label="Próxima imagem"
-      >
-        ❯
-      </button>
-    </div>
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-right"
+              onClick={proxima}
+              aria-label="Próxima imagem"
+            >
+              ❯
+            </button>
+          </div>
 
-    <div className="carousel-caption" aria-live="polite">
-      <p>{imagens[indice].legenda}</p>
-      <span>
-        {indice + 1} / {imagens.length}
-      </span>
-    </div>
-  </div>
-</Section>
+          <div className="carousel-caption" aria-live="polite">
+            <p>{imagens[indice].legenda}</p>
+            <span>
+              {indice + 1} / {imagens.length}
+            </span>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }

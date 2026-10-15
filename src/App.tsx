@@ -5,10 +5,12 @@ import SagradoSistema from "./pages/SagradoSistema";
 import EcoBalance from "./pages/EcoBalance";
 import QeM from "./pages/QeM";
 import EcoBalanceMobile from "./pages/EcoBalanceMobile";
+import ScrollToTop from "./components/ScrollTop";
 
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
 

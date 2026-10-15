@@ -13,10 +13,11 @@ import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "EcoBalance Mobile",
-  stack: ["React", "TypeScript", "JavaScript"],
+  stack: ["React Native", "TypeScript", "JavaScript"],
   repoUrl: "https://github.com/littlerichard01/EcoBalance-mobile",
   description:
     "Plataforma de rastreamento de carbono desenvolvida para auxiliar empresas e indivíduos a monitorar e reduzir sua pegada de carbono. O objetivo é fornecer informações sobre as emissões de gases de efeito estufa, permitindo que os usuários adotem práticas mais sustentáveis e contribuam para a preservação do meio ambiente.",
+  contribuition: "Contribuí com o desenvolvimento das interfaces do aplicativo utilizando React Native, trabalhando na construção das telas, na estilização dos componentes e na navegação. Minha atuação foi voltada à adaptação da experiência para dispositivos móveis."
 };
 
 const imagens = [
@@ -35,7 +36,7 @@ const imagens = [
 ];
 
 export default function EcoBalanceMobile() {
-     const [indice, setIndice] = useState(0);
+  const [indice, setIndice] = useState(0);
 
   function anterior() {
     setIndice((atual) => (
@@ -48,8 +49,8 @@ export default function EcoBalanceMobile() {
   }
 
   return (
-    <main>
-      <Cabecalho/>
+    <main className="pagina-projeto">
+      <Cabecalho />
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"
@@ -70,58 +71,56 @@ export default function EcoBalanceMobile() {
           <p>
             <b>Descrição:</b> {featuredProject.description}
           </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
+          </p>
         </Card>
       </Section>
 
       <Section title="O projeto em funcionamento">
-  <div
-    className="project-carousel"
-    role="region"
-    aria-label="Imagens do EcoBalanceMobile"
-    aria-roledescription="carrossel"
-  >
-    <div className="carousel-stage">
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-left"
-        onClick={anterior}
-        aria-label="Imagem anterior"
-      >
-        ❮
-      </button>
+        <div
+          className="project-carousel"
+          role="region"
+          aria-label="Imagens do EcoBalanceMobile"
+          aria-roledescription="carrossel"
+        >
+          <div className="carousel-stage">
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-left"
+              onClick={anterior}
+              aria-label="Imagem anterior"
+            >
+              ❮
+            </button>
 
-      <a
-        href={imagens[indice].src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="carousel-image-link"
-        aria-label={`Ampliar: ${imagens[indice].legenda}`}
-      >
-        <img
-          src={imagens[indice].src}
-          alt={imagens[indice].legenda}
-          className="carousel-image"
-        />
-      </a>
+            <div className="carousel-image-link">
+              <img
+                src={imagens[indice].src}
+                alt={imagens[indice].legenda}
+                className="carousel-image"
+              />
+            </div>
 
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-right"
-        onClick={proxima}
-        aria-label="Próxima imagem"
-      >
-        ❯
-      </button>
-    </div>
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-right"
+              onClick={proxima}
+              aria-label="Próxima imagem"
+            >
+              ❯
+            </button>
+          </div>
 
-    <div className="carousel-caption" aria-live="polite">
-      <p>{imagens[indice].legenda}</p>
-      <span>
-        {indice + 1} / {imagens.length}
-      </span>
-    </div>
-  </div>
-</Section>
+          <div className="carousel-caption" aria-live="polite">
+            <p>{imagens[indice].legenda}</p>
+            <span>
+              {indice + 1} / {imagens.length}
+            </span>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }

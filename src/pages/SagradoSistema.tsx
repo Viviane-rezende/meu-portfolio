@@ -20,6 +20,8 @@ const featuredProject = {
   repoUrl: "https://github.com/emanuelmartinslima/ProjetoPI2-Sagrado-Sistema",
   description:
     "Plataforma de gestão de contratos e clientes para uma empresa de serviços. O objetivo é facilitar o gerenciamento de informações, permitindo que a empresa acompanhe o status dos contratos, mantenha registros precisos e melhore a comunicação com os clientes.",
+  contribuition:
+    "Atuei na prototipação das interfaces, na documentação do projeto e no desenvolvimento front-end utilizando HTML, CSS e JavaScript. Contribuí para a estruturação das páginas, estilização dos elementos e implementação das interações da interface, com foco na organização das informações de clientes e contratos e na navegação entre as telas.",
 };
 
 const imagens = [
@@ -38,7 +40,7 @@ const imagens = [
 ];
 
 export default function SagradoSistema() {
-     const [indice, setIndice] = useState(0);
+  const [indice, setIndice] = useState(0);
 
   function anterior() {
     setIndice((atual) => (
@@ -51,8 +53,8 @@ export default function SagradoSistema() {
   }
 
   return (
-    <main>
-      <Cabecalho/>
+    <main className="pagina-projeto">
+      <Cabecalho />
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"
@@ -73,58 +75,57 @@ export default function SagradoSistema() {
           <p>
             <b>Descrição:</b> {featuredProject.description}
           </p>
+
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
+          </p>
         </Card>
       </Section>
 
       <Section title="O projeto em funcionamento">
-  <div
-    className="project-carousel"
-    role="region"
-    aria-label="Imagens do SagradoSistema"
-    aria-roledescription="carrossel"
-  >
-    <div className="carousel-stage">
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-left"
-        onClick={anterior}
-        aria-label="Imagem anterior"
-      >
-        ❮
-      </button>
+        <div
+          className="project-carousel"
+          role="region"
+          aria-label="Imagens do SagradoSistema"
+          aria-roledescription="carrossel"
+        >
+          <div className="carousel-stage">
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-left"
+              onClick={anterior}
+              aria-label="Imagem anterior"
+            >
+              ❮
+            </button>
 
-      <a
-        href={imagens[indice].src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="carousel-image-link"
-        aria-label={`Ampliar: ${imagens[indice].legenda}`}
-      >
-        <img
-          src={imagens[indice].src}
-          alt={imagens[indice].legenda}
-          className="carousel-image"
-        />
-      </a>
+            <div className="carousel-image-link">
+              <img
+                src={imagens[indice].src}
+                alt={imagens[indice].legenda}
+                className="carousel-image"
+              />
+            </div>
 
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-right"
-        onClick={proxima}
-        aria-label="Próxima imagem"
-      >
-        ❯
-      </button>
-    </div>
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-right"
+              onClick={proxima}
+              aria-label="Próxima imagem"
+            >
+              ❯
+            </button>
+          </div>
 
-    <div className="carousel-caption" aria-live="polite">
-      <p>{imagens[indice].legenda}</p>
-      <span>
-        {indice + 1} / {imagens.length}
-      </span>
-    </div>
-  </div>
-</Section>
+          <div className="carousel-caption" aria-live="polite">
+            <p>{imagens[indice].legenda}</p>
+            <span>
+              {indice + 1} / {imagens.length}
+            </span>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }
