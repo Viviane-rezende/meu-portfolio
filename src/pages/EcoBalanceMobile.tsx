@@ -35,7 +35,7 @@ const imagens = [
 ];
 
 export default function EcoBalanceMobile() {
-     const [indice, setIndice] = useState(0);
+  const [indice, setIndice] = useState(0);
 
   function anterior() {
     setIndice((atual) => (
@@ -49,7 +49,7 @@ export default function EcoBalanceMobile() {
 
   return (
     <main className="pagina-projeto">
-      <Cabecalho/>
+      <Cabecalho />
       <Section title={featuredProject.title}>
         <Card
           title="Sobre o projeto"
@@ -74,54 +74,48 @@ export default function EcoBalanceMobile() {
       </Section>
 
       <Section title="O projeto em funcionamento">
-  <div
-    className="project-carousel"
-    role="region"
-    aria-label="Imagens do EcoBalanceMobile"
-    aria-roledescription="carrossel"
-  >
-    <div className="carousel-stage">
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-left"
-        onClick={anterior}
-        aria-label="Imagem anterior"
-      >
-        ❮
-      </button>
+        <div
+          className="project-carousel"
+          role="region"
+          aria-label="Imagens do EcoBalanceMobile"
+          aria-roledescription="carrossel"
+        >
+          <div className="carousel-stage">
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-left"
+              onClick={anterior}
+              aria-label="Imagem anterior"
+            >
+              ❮
+            </button>
 
-      <a
-        href={imagens[indice].src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="carousel-image-link"
-        aria-label={`Ampliar: ${imagens[indice].legenda}`}
-      >
-        <img
-          src={imagens[indice].src}
-          alt={imagens[indice].legenda}
-          className="carousel-image"
-        />
-      </a>
+            <div className="carousel-image-link">
+              <img
+                src={imagens[indice].src}
+                alt={imagens[indice].legenda}
+                className="carousel-image"
+              />
+            </div>
 
-      <button
-        type="button"
-        className="carousel-arrow carousel-arrow-right"
-        onClick={proxima}
-        aria-label="Próxima imagem"
-      >
-        ❯
-      </button>
-    </div>
+            <button
+              type="button"
+              className="carousel-arrow carousel-arrow-right"
+              onClick={proxima}
+              aria-label="Próxima imagem"
+            >
+              ❯
+            </button>
+          </div>
 
-    <div className="carousel-caption" aria-live="polite">
-      <p>{imagens[indice].legenda}</p>
-      <span>
-        {indice + 1} / {imagens.length}
-      </span>
-    </div>
-  </div>
-</Section>
+          <div className="carousel-caption" aria-live="polite">
+            <p>{imagens[indice].legenda}</p>
+            <span>
+              {indice + 1} / {imagens.length}
+            </span>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }
