@@ -20,6 +20,8 @@ const featuredProject = {
   repoUrl: "https://github.com/emanuelmartinslima/ProjetoPI2-Sagrado-Sistema",
   description:
     "Plataforma de gestão de contratos e clientes para uma empresa de serviços. O objetivo é facilitar o gerenciamento de informações, permitindo que a empresa acompanhe o status dos contratos, mantenha registros precisos e melhore a comunicação com os clientes.",
+  contribuition:
+    "Atuei na prototipação das interfaces, na documentação do projeto e no desenvolvimento front-end utilizando HTML, CSS e JavaScript. Contribuí para a estruturação das páginas, estilização dos elementos e implementação das interações da interface, com foco na organização das informações de clientes e contratos e na navegação entre as telas.",
 };
 
 const imagens = [
@@ -72,6 +74,11 @@ export default function SagradoSistema() {
 
           <p>
             <b>Descrição:</b> {featuredProject.description}
+          </p>
+
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
           </p>
         </Card>
       </Section>

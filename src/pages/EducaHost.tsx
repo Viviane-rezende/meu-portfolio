@@ -18,7 +18,11 @@ const featuredProject = {
   repoUrl: "https://github.com/emanuelmartinslima/Projeto-Educahost",
   description:
     "Plataforma educacional desenvolvida como complemento estudantil para crianças refugiadas. O objetivo é auxiliar na adaptação ao território brasileiro e no aprendizado por meio de atividades gamificadas, tornando esse processo leve e divertido.",
-};
+  contribuition: "Atuei na elaboração e organização da documentação técnica e funcional, contribuindo para \
+  a descrição dos objetivos, do público-alvo e das funcionalidades da plataforma. Colaborei na estruturação \
+  das informações que orientaram o desenvolvimento da solução educacional, bem como artefatos de apoio,\
+  como fluxogramas e diagramas, que auxiliaram na visualização e compreensão do projeto."
+  };
 
 const imagens = [
   {
@@ -70,6 +74,10 @@ export default function EducaHost() {
 
           <p>
             <b>Descrição:</b> {featuredProject.description}
+          </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
           </p>
         </Card>
       </Section>

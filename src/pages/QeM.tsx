@@ -13,12 +13,13 @@ import { useState } from "react";
 import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
-  title: "Q&M",
+  title: "Questões e Masmorras",
   stack: ["HTML", "CSS", "JavaScript"],
   repoUrl: "https://github.com/Lucas-Gatto/Questoes-e-Masmorras",
   description:
     "Plataforma de gamificação para estudos desenvolvida com o objetivo de tornar o aprendizado mais envolvente e motivador. O projeto combina elementos de jogos, como desafios, recompensas e progressão, com conteúdo educacional, proporcionando uma experiência interativa que estimula a participação ativa dos usuários e promove a retenção do conhecimento.",
-};
+  contribuition: "Contribuí com a prototipação, a documentação e o desenvolvimento front-end utilizando React, JavaScript e CSS. Atuei na implementação das interfaces de cadastro e edição de aventuras e salas, na manipulação de estado dos componentes e nas interações de avaliação por estrelas, além de ajustes de responsividade e padronização visual.",
+  };
 
 const imagens = [
   {
@@ -70,6 +71,10 @@ export default function QeM() {
 
           <p>
             <b>Descrição:</b> {featuredProject.description}
+          </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
           </p>
         </Card>
       </Section>

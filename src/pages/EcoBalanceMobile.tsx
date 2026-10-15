@@ -13,10 +13,11 @@ import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "EcoBalance Mobile",
-  stack: ["React", "TypeScript", "JavaScript"],
+  stack: ["React Native", "TypeScript", "JavaScript"],
   repoUrl: "https://github.com/littlerichard01/EcoBalance-mobile",
   description:
     "Plataforma de rastreamento de carbono desenvolvida para auxiliar empresas e indivíduos a monitorar e reduzir sua pegada de carbono. O objetivo é fornecer informações sobre as emissões de gases de efeito estufa, permitindo que os usuários adotem práticas mais sustentáveis e contribuam para a preservação do meio ambiente.",
+  contribuition: "Contribuí com o desenvolvimento das interfaces do aplicativo utilizando React Native, trabalhando na construção das telas, na estilização dos componentes e na navegação. Minha atuação foi voltada à adaptação da experiência para dispositivos móveis."
 };
 
 const imagens = [
@@ -69,6 +70,10 @@ export default function EcoBalanceMobile() {
 
           <p>
             <b>Descrição:</b> {featuredProject.description}
+          </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
           </p>
         </Card>
       </Section>

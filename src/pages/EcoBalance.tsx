@@ -13,11 +13,12 @@ import Cabecalho from "../components/Cabecalho";
 
 const featuredProject = {
   title: "EcoBalance",
-  stack: ["HTML", "CSS", "JavaScript"],
+  stack: ["HTML", "CSS", "React","JavaScript"],
   repoUrl: "https://github.com/littlerichard01/EcoBalance",
   description:
     "Plataforma de rastreamento de carbono desenvolvida para auxiliar empresas e indivíduos a monitorar e reduzir sua pegada de carbono. O objetivo é fornecer informações sobre as emissões de gases de efeito estufa, permitindo que os usuários adotem práticas mais sustentáveis e contribuam para a preservação do meio ambiente.",
-};
+  contribuition: "Atuei no desenvolvimento front-end com React, JavaScript e CSS, implementando interfaces de cadastro, visualização de gráficos e conquistas. Também contribuí com ajustes de responsividade, navegação e organização dos elementos das páginas, buscando tornar a experiência mais intuitiva."
+  };
 
 const imagens = [
   {
@@ -69,6 +70,10 @@ export default function EcoBalance() {
 
           <p>
             <b>Descrição:</b> {featuredProject.description}
+          </p>
+          <p className="projeto-contribuicao">
+            <b>
+              Minha Contribuição:</b> {featuredProject.contribuition}
           </p>
         </Card>
       </Section>
